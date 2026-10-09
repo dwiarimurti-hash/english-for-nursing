@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chapter 1 · Interactive Practice</title><style>
+:root{--ink:#1F3B57;--accent:#5B4B8A;--soft:#F4F1FA;--line:#DCE3E9;--muted:#5A6B78;--bg:#FAFBFC;--ok:#1E7B4F;--okbg:#E7F5EE;--no:#B3261E;--nobg:#FCEBEA}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 40px}
+a{color:var(--accent)} .book{font-size:13px;color:var(--muted);text-decoration:none}
+h1{font-size:25px;line-height:1.2;margin:6px 0 4px} .sub{color:var(--muted);margin:0 0 14px;font-size:15px}
+.tracks{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px} .tracks a{font-size:14px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 12px;text-decoration:none}
+.tabs{display:flex;gap:6px;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:16px}
+.tabs button{font:inherit;font-size:15px;background:none;border:0;border-bottom:3px solid transparent;padding:10px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected=true]{color:var(--ink);border-color:var(--accent);font-weight:600}
+.intro{font-size:14px;color:var(--muted);margin:0 0 12px}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:8px 12px;cursor:pointer;min-height:40px}
+button.ghost{background:transparent} button:disabled{opacity:.5;cursor:default}
+.q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.qt{margin:0 0 10px;font-weight:600} .n{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:99px;background:var(--soft);color:var(--accent);font-size:13px;margin-right:6px}
+.opts{display:grid;gap:8px} .opt{text-align:left;width:100%}
+.opt.right{background:var(--okbg);border-color:var(--ok);color:var(--ok);opacity:1} .opt.wrong{background:var(--nobg);border-color:var(--no);color:var(--no);opacity:1}
+.fb{margin:10px 0 0;font-size:14px} .fb.ok{color:var(--ok)} .fb.no{color:var(--no)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap} #quiz-score{font-weight:600}
+.done{background:var(--soft);border-radius:12px;padding:12px;margin-top:6px}
+.fc{perspective:900px;margin:6px 0 12px;cursor:pointer}
+.fc-in{position:relative;min-height:190px;transition:transform .45s;transform-style:preserve-3d}
+.fc.flipped .fc-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;justify-content:center}
+#fc-front{font-size:24px;font-weight:700;text-align:center} .back{transform:rotateY(180deg);font-size:15px}
+.back div{margin:3px 0} .back span{display:block;font-size:12px;color:var(--muted)}
+.tap{position:absolute;bottom:8px;right:12px;font-size:12px;color:var(--muted)}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center} #fc-pos{font-size:14px;color:var(--muted);margin-left:auto}
+button[aria-pressed=true]{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.dict{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:4px 0} .row audio{flex:1;min-width:200px;height:40px}
+textarea{width:100%;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:10px;padding:8px;margin:6px 0}
+.res{font-size:15px} .w-ok{color:var(--ok);font-weight:600} .w-no{color:var(--no);text-decoration:underline}
+.st{margin:0 0 6px;font-weight:600} .rec.on{background:var(--nobg);border-color:var(--no);color:var(--no)} .hint{font-size:13px;color:var(--muted)}
+.warn{background:var(--nobg);color:var(--no);border-radius:10px;padding:10px;font-size:14px}
+footer{margin-top:28px;font-size:12px;color:var(--muted)}
+.chrow{display:block;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:8px}
+.chrow .t{font-weight:600} .chrow .k{font-size:13px;color:var(--muted)} .chrow .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;font-size:14px}
+.prog{font-size:12px;font-weight:600;color:var(--ok);background:var(--okbg);border-radius:99px;padding:1px 8px;margin-left:6px}
+</style></head><body><div class="wrap"><a class="book" href="index.html">Belajar Cepat Bahasa Inggris untuk Perawat · All chapters</a>
+<h1>Chapter 1 · Interactive Practice</h1><p class="sub">English as the International Language of Nursing</p>
+<div class="tracks"><a href="01-1.html">▶ Track 1.1 · Listening</a><a href="01-2.html">▶ Track 1.2 · Dialogue</a></div>
+<div class="tabs" role="tablist">
+<button type="button" data-tab="p-quiz" aria-selected="true">Quiz</button>
+<button type="button" data-tab="p-cards" aria-selected="false">Flashcards</button>
+<button type="button" data-tab="p-dict" aria-selected="false">Dictation</button>
+<button type="button" data-tab="p-shadow" aria-selected="false">Shadowing</button></div>
+<section class="panel" id="p-quiz"><p class="intro">Grammar, vocabulary, and comprehension from the Integrated Skills Lab. Tap an answer to see if you are right.</p>
+<div class="bar"><span id="quiz-score"></span><button type="button" id="quiz-reset" class="ghost">↺ Try again</button></div>
+<div id="quiz-list"></div><div id="quiz-done" class="done" hidden></div></section>
+<section class="panel" id="p-cards" hidden><p class="intro">Tap the card to flip it. Use 🔊 to hear the word, and mark the words you already know.</p>
+<div class="fc" id="fc-card"><div class="fc-in"><div class="face"><div id="fc-front"></div><span class="tap">tap to flip</span></div><div class="face back" id="fc-back"></div></div></div>
+<div class="ctrl"><button type="button" id="fc-prev">←</button><button type="button" id="fc-next">→</button><button type="button" id="fc-say">🔊 Say</button>
+<button type="button" id="fc-known" aria-pressed="false">✓ I know it</button><button type="button" id="fc-shuffle" class="ghost">Shuffle</button><span id="fc-pos"></span></div></section>
+<section class="panel" id="p-dict" hidden><p class="intro">Listen to each sentence as many times as you need, type it, then check. Correct words turn green; missing or wrong words are underlined in red.</p><div id="dict-list"></div></section>
+<section class="panel" id="p-shadow" hidden><p class="intro">Play the model, then record yourself saying the same sentence with the same rhythm and stress. Play both and compare.</p>
+<p class="warn" id="sh-norec" hidden>Recording is not supported in this browser. Try Chrome on Android or Safari on iPhone.</p><div id="sh-list"></div></section>
+<script>window.PRACTICE={"ch": "ch01", "quiz": [{"q": "Mr. Zacky ___ type 2 diabetes.", "o": ["has", "is having"], "a": 0, "w": "A permanent fact uses the present simple."}, {"q": "Right now he ___, so I'll come back later.", "o": ["sleeps", "is sleeping"], "a": 1, "w": "An action happening now uses the present continuous."}, {"q": "The doctor usually ___ the ward at ten.", "o": ["visits", "is visiting"], "a": 0, "w": "A routine (usually) uses the present simple."}, {"q": "Please wait outside. We ___ his dressing at the moment.", "o": ["change", "are changing"], "a": 1, "w": "'At the moment' signals the present continuous."}, {"q": "How do you say BP 96/58?", "o": ["ninety-six over fifty-eight", "ninety-six divided by fifty-eight", "nine six fifty-eight"], "a": 0, "w": "Blood pressure is read as 'X over Y'."}, {"q": "Which word means 'saturasi oksigen'?", "o": ["respiratory rate", "oxygen saturation", "blood glucose"], "a": 1, "w": "SpO2 = oxygen saturation."}, {"q": "In the reading text, 'occlusion' means...", "o": ["a low battery", "a blockage in a tube", "an alarm sound"], "a": 1, "w": "Infusion pumps show 'Occlusion' when the line is blocked."}, {"q": "What does Nadia do after she hears the observations on the phone?", "o": ["She writes them on the wall chart", "She reads them back", "She calls the doctor"], "a": 1, "w": "Reading back numbers corrects errors early."}], "cards": [{"front": "blood pressure (BP)", "back": [["Meaning", "force of blood against the artery walls"], ["Indonesian", "tekanan darah"], ["How we say it", "\"one-twenty over eighty\""]]}, {"front": "heart rate, pulse (HR)", "back": [["Meaning", "number of heartbeats per minute"], ["Indonesian", "denyut nadi"], ["How we say it", "\"seventy-two beats per minute\""]]}, {"front": "respiratory rate (RR)", "back": [["Meaning", "number of breaths per minute"], ["Indonesian", "frekuensi napas"], ["How we say it", "\"eighteen breaths per minute\""]]}, {"front": "temperature (T)", "back": [["Meaning", "body heat"], ["Indonesian", "suhu tubuh"], ["How we say it", "\"thirty-seven point two degrees\""]]}, {"front": "oxygen saturation (SpO2)", "back": [["Meaning", "percentage of haemoglobin carrying oxygen"], ["Indonesian", "saturasi oksigen"], ["How we say it", "\"ninety-eight percent on room air\""]]}, {"front": "blood glucose (BG)", "back": [["Meaning", "level of sugar in the blood"], ["Indonesian", "gula darah"], ["How we say it", "\"eight point four millimoles per litre\""]]}, {"front": "pain score", "back": [["Meaning", "the patient's rating of pain from 0 to 10"], ["Indonesian", "skor nyeri"], ["How we say it", "\"three out of ten\""]]}, {"front": "fluid intake and output", "back": [["Meaning", "fluids taken in and passed out"], ["Indonesian", "asupan dan haluaran cairan"], ["How we say it", "\"two hundred mils\""]]}], "say": [{"text": "Could you spell your surname, please?", "file": "say-01-1.mp3"}, {"text": "Let me read that back: blood pressure one-forty-two over eighty-eight.", "file": "say-01-2.mp3"}, {"text": "Please clean your hands with the hand rub before you go into his room.", "file": "say-01-3.mp3"}]};</script><script src="practice.js"></script><footer>Belajar Cepat Bahasa Inggris untuk Perawat · Dr. Dwi Ari Murti Widigdo, MN · Prodi Sarjana Terapan Keperawatan Magelang, Poltekkes Kemenkes Semarang.<br>Audio recorded with synthetic (text-to-speech) voices for learning purposes. Your scores are saved only on this device. Voice recordings stay on your phone and are never uploaded.</footer></div></body></html>
