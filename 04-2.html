@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Track 4.2: A Critical Result by Telephone</title><style>
+:root{--ink:#1F3B57;--accent:#5B4B8A;--soft:#F4F1FA;--line:#DCE3E9;--muted:#5A6B78;--bg:#FAFBFC;--card:#fff}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.book{font-size:13px;color:var(--muted);letter-spacing:.02em;text-decoration:none}
+h1{font-size:26px;line-height:1.2;margin:6px 0 4px}
+.sub{color:var(--muted);margin:0 0 18px;font-size:15px}
+.badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:99px;background:var(--soft);color:var(--accent);margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+audio{width:100%;margin:6px 0 12px}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:8px 12px;cursor:pointer;min-height:40px}
+button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.note{font-size:14px;color:var(--muted);margin:14px 0 0}
+nav.pn{display:flex;justify-content:space-between;gap:10px;margin-top:18px;font-size:14px}
+a{color:var(--accent)}
+.chap{margin:22px 0 8px;font-size:15px}
+.row{display:block;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:8px}
+.row .t{font-weight:600}.row .k{font-size:12px;color:var(--muted)}
+.row audio{margin:8px 0 0;height:36px}
+footer{margin-top:28px;font-size:12px;color:var(--muted)}
+</style></head><body><div class="wrap"><a class="book" href="../index.html">Belajar Cepat Bahasa Inggris untuk Perawat · All tracks</a>
+<h1>Track 4.2: A Critical Result by Telephone</h1>
+<p class="sub">Chapter 4 · Listening for Academic Purposes</p>
+<div class="card"><span class="badge">Dialogue · 1:01</span>
+<audio controls preload="metadata" src="../audio/track-04-2.mp3"></audio>
+<div class="ctrl"><button id="back" type="button">↺ 5 s back</button>
+<button type="button" data-rate="0.75" aria-pressed="false">Slower 0.75×</button>
+<button type="button" data-rate="1" aria-pressed="true">Normal 1×</button></div>
+<p class="note">The script is printed in Part C of the chapter. Listen, then role-play the dialogue.</p></div>
+<nav class="pn"><a href="04-1.html">← Track 4.1</a><a href="../index.html">All tracks</a><a href="05-1.html">Track 5.1 →</a></nav><script>
+const a=document.querySelector('audio');
+document.querySelectorAll('[data-rate]').forEach(b=>b.onclick=()=>{a.playbackRate=+b.dataset.rate;
+document.querySelectorAll('[data-rate]').forEach(x=>x.setAttribute('aria-pressed',x===b));});
+document.getElementById('back').onclick=()=>{a.currentTime=Math.max(0,a.currentTime-5)};
+</script>
+<footer>Belajar Cepat Bahasa Inggris untuk Perawat · Dr. Dwi Ari Murti Widigdo, MN · Prodi Sarjana Terapan Keperawatan Magelang, Poltekkes Kemenkes Semarang.<br>
+Audio recorded with synthetic (text-to-speech) voices for learning purposes. All characters and institutions in the scripts are fictional.</footer></div></body></html>
